@@ -1,0 +1,62 @@
+/* 
+[aria-label=primary] {
+	background-color: blue;
+  }
+  
+  [aria-label=accent] {
+	background-color: aqua;
+  }
+
+.example-stretched-tabs {
+	max-width: 100%;
+	height: 100%;
+	background-image: linear-gradient( #242e35 ,#01010d);
+
+  }
+ 
+ .example-large-box {
+	align-items: center;
+	justify-content: center;
+	margin: 16px;
+	padding: 16px;
+	border-radius: 8px;
+	margin-top: 80px;
+	text-align: center;
+  }
+  
+  .example-large-box {
+	height: 400px;
+	width: 350px;
+  }
+
+  .background {
+	color: #fff;
+    background-image: linear-gradient(90deg , #242e35 ,#01010d);
+   font-family: 'Roboto', sans-serif;
+  }
+
+  ::ng-deep .mat-form-field-label {
+    color: white !important;
+  } 
+
+  ::ng-deep .mat-form-field-underline {
+	background-color: white !important;
+  }
+
+ ::ng-deep .mat-form-field-ripple {
+	background-color: white !important;;
+  }  */
+
+  .example-stretched-tabs {
+    max-width: 100%;
+    height: 100%;
+    }
+  
+  .card {
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100px;
+    background-color: wheat;
+    border: 2px solid white;
+  }

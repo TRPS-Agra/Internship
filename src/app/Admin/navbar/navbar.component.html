@@ -1,0 +1,168 @@
+<!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <div class="profile-info">
+      <div class="user-img"><img src="assets\images\gobest-service-logo.png" width="150px" height="90px" alt="user">
+      </div>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/adminDashboard']" routerLinkActive="active"> Dashboard </a>
+      <a mat-list-item [routerLink]="['/adminPanel']" routerLinkActive="active">  Panel </a>
+      <a mat-list-item href="...">  Franchise </a>
+      <a mat-list-item href="...">  Discounts / Coupons </a>
+      <a mat-list-item href="...">  Accounting </a>
+      <a mat-list-item href="...">  News </a>
+      <a mat-list-item href="...">  Customer </a>
+      <a mat-list-item href="...">  Staff </a>
+      <a mat-list-item href="...">  Orders </a>
+      <a mat-list-item href="...">  Jobs </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button (click)="sidenav.toggle()" mat-icon-button><i class="material-icons">menu</i></button>
+      <span class="user-text">Admin</span>
+      <span class="example-fill-remaining-space"></span>
+      <button mat-icon-button><mat-icon><i class="fa fa-bullhorn"></i></mat-icon></button>
+      <button mat-icon-button><mat-icon>notifications_none</mat-icon></button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button> 
+        <button mat-menu-item>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+
+    </mat-toolbar>
+    
+    <div class="main-cont">
+      <router-outlet></router-outlet> 
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ -->
+
+ <div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+        <img src="assets\images\gobest-icon.png" class="loading mx-auto" width="100px" height="100px">
+      </div>
+      <ul class="list-unstyled components mt-3">
+          <li class="">
+            <a href="/adminDashboard"><i class="material-icons mx-3">dashboard</i>Dashboard</a>
+          </li>
+          <li>
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="material-icons mx-3">assessment</i>Panel</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li><a href="#">Inventory</a></li>
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">Location</a></li>
+                  <li><a href="#">Stock</a></li>
+              </ul>
+          </li>
+          <!-- <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+          </li> -->
+            <li>
+                <a href="#"><i class="material-icons px-3">supervised_user_circle</i>Franchise</a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons px-3">local_offer</i>Discounts / Coupons</a>
+            </li>
+            <li>
+              <a href="#"><i class="material-icons px-3">account_balance</i>Accounting</a>
+            </li>
+            <li>
+              <a href="#"><i class="material-icons px-3">public</i>News</a>
+            </li>
+            <li>
+              <a href="#"><i class="material-icons px-3">perm_identity</i>Customer</a>
+            </li>
+            <li>
+              <a href="#"><i class="material-icons px-3">supervisor_account</i>Staff</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-home px-3"></i>Orders</a>
+              </li>
+            <li>
+                <a href="#"><i class="fa fa-home px-3"></i>Jobs</a>
+            </li>
+
+      </ul>
+      <!-- <ul class="list-unstyled CTAs">
+          <li>
+              <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+          </li>
+          <li>
+              <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+          </li>
+      </ul> -->
+  </nav>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+              <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+              <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-align-justify"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="nav navbar-nav top-nav">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Page</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Page</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Page</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Page</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      
+      <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <div class="line"></div>
+
+      <h2>Lorem Ipsum Dolor</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <div class="line"></div>
+
+      <h2>Lorem Ipsum Dolor</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <div class="line"></div>
+
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>

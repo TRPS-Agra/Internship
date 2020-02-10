@@ -1,0 +1,207 @@
+<div class="background">
+ 
+  <!-- Signup For End -->
+      <div class="signup-form mx-auto" *ngIf="disableUserInput">
+        <form action="" method="post" [formGroup]="signupFormGroup">
+          <img src="assets\images\gobest-icon.png" class="loading mx-auto" width="100px" height="100px">
+          <h2 class="text-center">Franchise Sign Up</h2>
+          <p class="text-center">Please fill in this form to create an account!</p>
+          <hr>
+
+        <!-- <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" name="username" placeholder="Username" formControlName="username"
+            autocomplete="off" #username>
+            <mat-error *ngIf="signupFormGroup?.controls?.username?.hasError('required')">Username is
+              <strong>required.</strong></mat-error>
+            <mat-error *ngIf="signupFormGroup?.controls?.username?.hasError('pattern')">Username is in <strong>wrong
+                format.</strong></mat-error>
+          <mat-error>{{error}}</mat-error>
+
+        </div> -->
+
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-sm-12">
+            <mat-form-field appearance="outline">
+              <mat-label>User ID</mat-label>
+              <input matInput type="text" name="username" placeholder="Enter User ID" formControlName="username" autocomplete="off">
+              <mat-icon matSuffix><i class="fa fa-user"></i></mat-icon>
+              <mat-error *ngIf="signupFormGroup?.controls?.username?.hasError('required')"> User ID is
+                <strong>required.</strong></mat-error>
+              <mat-error *ngIf="signupFormGroup?.controls?.username?.hasError('pattern')">User ID is in <strong>wrong
+                  format.</strong></mat-error>
+              <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-sm-12">
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput type="text" name="first_name" placeholder="Enter First Name" formControlName="fname" autocomplete="off" #fname>
+              <mat-icon matSuffix>sentiment_satisfied_alt</mat-icon>
+              <mat-error *ngIf="signupFormGroup?.controls?.fname?.hasError('required')">First Name is
+                <strong>required.</strong></mat-error>
+              <mat-error *ngIf="signupFormGroup?.controls?.fname?.hasError('pattern')">Please use
+                <strong>characters.</strong></mat-error>
+              <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-sm-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" name="last_name" placeholder="Enter Last Name" formControlName="lname" autocomplete="off" #lname>
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error *ngIf="signupFormGroup?.controls?.lname?.hasError('required')">Last Name is
+                <strong>required.</strong></mat-error>
+              <mat-error *ngIf="signupFormGroup?.controls?.lname?.hasError('pattern')">Please use
+                <strong>characters.</strong></mat-error>
+              <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Contact Number</mat-label>
+              <input matInput type="tel" name="number" placeholder="Enter Contact Number" formControlName="mobile" autocomplete="off" #mobile>
+              <mat-icon matSuffix>contact_phone</mat-icon>
+              <mat-error *ngIf="signupFormGroup?.controls?.mobile?.hasError('required')">Contact Number is
+                <strong>required.</strong></mat-error>
+              <mat-error
+                *ngIf="signupFormGroup?.controls?.mobile?.hasError('minlength') || signupFormGroup?.controls?.mobile?.hasError('maxlength')">
+                Please enter 10 digits.</mat-error>
+              <mat-error *ngIf="signupFormGroup?.controls?.mobile?.hasError('pattern')">Wrong contact number.</mat-error>
+              <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+          </div>  
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Email Address</mat-label>
+              <input matInput type="email" name="email" placeholder="Enter Email Address" formControlName="email" autocomplete="off" #email>
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error *ngIf="signupFormGroup?.controls?.email?.hasError('required')">Email is <strong>required.</strong>
+              </mat-error>
+              <mat-error *ngIf="signupFormGroup?.controls?.email?.hasError('email')">Please Enter a valid email address
+              </mat-error>
+              <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+          </div>  
+        </div>
+
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="chide ? 'text':'password'" name="password" placeholder="Enter Password" formControlName="password" data-toggle="password" autocomplete="off" #password matTooltip="• Password should be 8 Alphanumeric Characters. &#13; • Password should contain atleast 1 special Character. &#13; • Password should contain atleast 1 uppercase letter. &#13; • Password should contain atleast 1 lowercase letter. &#13; • Password should contain atleast 1 number."
+                matTooltipPosition="left" matTooltipClass="multiple-line">
+                <mat-icon matSuffix (click)="chide = !chide">{{chide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <mat-error *ngIf="signupFormGroup?.controls?.password?.hasError('required')">Password is
+                  <strong>required.</strong></mat-error>
+                <mat-error *ngIf="signupFormGroup?.controls?.password?.hasError('pattern')">Password is not
+                  <strong>strong.</strong></mat-error>
+                <mat-error>{{error}}</mat-error>
+              </mat-form-field>
+            </div> 
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput [type]="chide ? 'text':'password'" name="confirm_password" placeholder="Enter Confirm Password" formControlName="cpassword" autocomplete="off" CompareValidator="password">
+                <mat-icon matSuffix (click)="chide = !chide" class="pointer">{{chide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <mat-error *ngIf="signupFormGroup?.controls?.cpassword?.hasError('required')">Confirm Password is
+                  <strong>required.</strong></mat-error>
+                <mat-error *ngIf="signupFormGroup?.controls?.cpassword?.hasError('notEqual')">Password does not
+                  <strong>match.</strong></mat-error>
+                <mat-error>{{error}}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-inline"><input type="checkbox" required="required" (change)="checkBoxValue($event)">Yes,
+              I would like to receive emails,
+              news,
+              updates and notifications form GoBest.</label>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-inline"><input type="checkbox" required="required" formControlName="privacy">
+              I accept the <a class="text-info" data-toggle="modal" data-target="#exampleModalTearms">Terms of Use</a>
+                &amp;  <a class="text-info" data-toggle="modal" data-target="#exampleModalPrivacy">Privacy Policy</a></label>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg"
+              [disabled]="signupFormGroup.pristine || signupFormGroup.invalid"
+              (click)="signUp(username.value, email.value, mobile.value, password.value)">Sign Up</button>
+          </div>
+      <div class="text-center text-white">Already have an account? <a href="/franchiseLogin" class="text-info">  Login here</a></div>
+    </form>
+  </div>
+
+  <!-- Signup For End -->
+
+  <!-- Verification Page -->
+
+          <div class="signup-form mx-auto" *ngIf="confirmCode">
+            <form action="" method="post" class="mt-5">
+              <img src="assets\images\gobest-icon.png" class="loading mx-auto" width="100px" height="100px">
+              <h2 class="text-center">Verification Code</h2>
+              <hr>
+              <p class="text-center">Please check your phone for the Verification code and enter it here:</p>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input type="text" class="form-control" name="password" placeholder="Enter your Verification Code"
+                    required="required" autocomplete="off" #vcode>
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                  <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+                </div> -->
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-lg" (click)="verifyCode(vcode.value)">Verify Phone</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+  <!-- Verification Page End-->
+
+  <!-- Terms of Use Modal -->
+        <div class="modal fade" id="exampleModalTearms" tabindex="-1" role="dialog" aria-labelledby="exampleModalTearmsTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalTearmsTitle"><b>Terms of Condition</b></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="background: #202931;color: beige;">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- Terms of Use Modal -->
+
+  
+  <!-- Privacy Policy Modal -->
+        <div class="modal fade" id="exampleModalPrivacy" tabindex="-1" role="dialog" aria-labelledby="exampleModalPrivacyTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalPrivacyTitle"><b>Privacy Policy</b></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="background: #202931;color: beige;">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- Privacy Policy Modal -->

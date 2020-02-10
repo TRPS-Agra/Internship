@@ -1,0 +1,45 @@
+.bg-img {
+    background-image: linear-gradient(to right, #bdbbbe, #50758e);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-form-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card {
+    height: 370px;
+    border-radius: 40px;
+    width: 400px;
+    background-image: linear-gradient(to right, #434343, #000000);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    color: white;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white !important;
+  }
+  
+  ::ng-deep .mat-input-element {
+    caret-color: white !important;
+  }
+  
+  ::ng-deep .mat-form-field-label {
+    color: white !important;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+  
+  ::ng-deep .mat-form-field .mat-hint,
+  input,
+  ::placeholder,
+  .mat-form-field-label {
+    color: white;
+  }
+      

@@ -1,0 +1,198 @@
+<mat-tab-group>
+
+  <!--Bikes-->
+  <mat-tab label="Bikes">
+    <mat-form-field>
+      <mat-label>Brand</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let bike of bikes" [value]="bike.value">
+          {{bike.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div [ngSwitch]="selected"> 
+      <div *ngSwitchCase="'Bajaj'">
+        <mat-form-field>
+          <mat-label>Bajaj Model</mat-label>
+          <mat-select [(ngModel)]="modelSelected">
+            <mat-option *ngFor="let model of bajajModels" [value]="model.value">
+              {{model.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div *ngSwitchCase="'Hero'">Hero</div>
+      <div *ngSwitchCase="'Honda'">Honda</div>
+      <div *ngSwitchCase="'Yamaha'">Yamaha</div>
+    </div>
+
+    <div [ngSwitch]="modelSelected">
+      <div *ngSwitchCase="'CT100'">
+        <mat-form-field>
+          <mat-label>Services</mat-label>
+          <mat-select [(value)]="selected2">
+            <mat-option *ngFor="let service of services" [value]="service.value">
+              {{service.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div *ngSwitchCase="'Platina'">Platina</div>
+      <div *ngSwitchCase="'Discover'">Discover</div>
+      <div *ngSwitchCase="'Pulsar'">Pulsar</div>
+    </div>
+
+    <p>You selected Brand: {{selected}}</p>
+    <p>You selected Model: {{modelSelected}}</p>
+    <p>You selected Services: {{selected2}}</p>
+  </mat-tab>
+
+  <!--Cars-->
+  <mat-tab label="Cars">
+    <mat-form-field>
+        <mat-label>Brand</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option *ngFor="let bike of bikes" [value]="bike.value">
+            {{bike.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div [ngSwitch]="selected">
+        <div *ngSwitchCase="'Bajaj'">
+          <mat-form-field>
+            <mat-label>Bajaj Model</mat-label>
+            <mat-select [(ngModel)]="modelSelected">
+              <mat-option *ngFor="let model of bajajModels" [value]="model.value">
+                {{model.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Hero'">Hero</div>
+        <div *ngSwitchCase="'Honda'">Honda</div>
+        <div *ngSwitchCase="'Yamaha'">Yamaha</div>
+      </div>
+  
+      <div [ngSwitch]="modelSelected">
+        <div *ngSwitchCase="'CT100'">
+          <mat-form-field>
+            <mat-label>Services</mat-label>
+            <mat-select [(value)]="selected2">
+              <mat-option *ngFor="let service of services" [value]="service.value">
+                {{service.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Platina'">Platina</div>
+        <div *ngSwitchCase="'Discover'">Discover</div>
+        <div *ngSwitchCase="'Pulsar'">Pulsar</div>
+      </div>
+  
+      <p>You selected Brand: {{selected}}</p>
+      <p>You selected Model: {{modelSelected}}</p>
+      <p>You selected Services: {{selected2}}</p>
+  </mat-tab>
+
+  <!--Electronics-->
+  <mat-tab label="Electronics">
+    <mat-form-field>
+        <mat-label>Brand</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option *ngFor="let bike of bikes" [value]="bike.value">
+            {{bike.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div [ngSwitch]="selected">
+        <div *ngSwitchCase="'Bajaj'">
+          <mat-form-field>
+            <mat-label>Bajaj Model</mat-label>
+            <mat-select [(ngModel)]="modelSelected">
+              <mat-option *ngFor="let model of bajajModels" [value]="model.value">
+                {{model.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Hero'">Hero</div>
+        <div *ngSwitchCase="'Honda'">Honda</div>
+        <div *ngSwitchCase="'Yamaha'">Yamaha</div>
+      </div>
+  
+      <div [ngSwitch]="modelSelected">
+        <div *ngSwitchCase="'CT100'">
+          <mat-form-field>
+            <mat-label>Services</mat-label>
+            <mat-select [(value)]="selected2">
+              <mat-option *ngFor="let service of services" [value]="service.value">
+                {{service.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Platina'">Platina</div>
+        <div *ngSwitchCase="'Discover'">Discover</div>
+        <div *ngSwitchCase="'Pulsar'">Pulsar</div>
+      </div>
+  
+      <p>You selected Brand: {{selected}}</p>
+      <p>You selected Model: {{modelSelected}}</p>
+      <p>You selected Services: {{selected2}}</p>
+  </mat-tab>
+
+  <!--Others-->
+  <mat-tab label="Others">
+    <mat-form-field>
+        <mat-label>Brand</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option *ngFor="let bike of bikes" [value]="bike.value">
+            {{bike.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div [ngSwitch]="selected">
+        <div *ngSwitchCase="'Bajaj'">
+          <mat-form-field>
+            <mat-label>Bajaj Model</mat-label>
+            <mat-select [(ngModel)]="modelSelected">
+              <mat-option *ngFor="let model of bajajModels" [value]="model.value">
+                {{model.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Hero'">Hero</div>
+        <div *ngSwitchCase="'Honda'">Honda</div>
+        <div *ngSwitchCase="'Yamaha'">Yamaha</div>
+      </div>
+  
+      <div [ngSwitch]="modelSelected">
+        <div *ngSwitchCase="'CT100'">
+          <mat-form-field>
+            <mat-label>Services</mat-label>
+            <mat-select [(value)]="selected2">
+              <mat-option *ngFor="let service of services" [value]="service.value">
+                {{service.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+  
+        <div *ngSwitchCase="'Platina'">Platina</div>
+        <div *ngSwitchCase="'Discover'">Discover</div>
+        <div *ngSwitchCase="'Pulsar'">Pulsar</div>
+      </div>
+  
+      <p>You selected Brand: {{selected}}</p>
+      <p>You selected Model: {{modelSelected}}</p>
+      <p>You selected Services: {{selected2}}</p>
+  </mat-tab>
+</mat-tab-group>

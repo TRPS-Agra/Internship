@@ -1,0 +1,101 @@
+.background {
+	color: #fff;
+    background-image: linear-gradient(90deg , #242e35 ,#01010d);
+    width: 100%;
+    height: 100%;
+	font-family: 'Roboto', sans-serif;
+  }
+  .loading {
+	display: block;
+	margin-top: -90px;
+	margin-bottom: 20px;
+	-webkit-animation: rotation 2s linear;
+	border: 2px solid #fff;
+	padding: 5px;
+	border-radius: 50%;
+	
+  }
+
+@-webkit-keyframes rotation {
+	from {
+			-webkit-transform: rotate(0deg);
+	}
+	to {
+			-webkit-transform: rotate(359deg);
+	}
+}	
+	.form-control, .form-control:focus, .input-group-addon {
+		border-color: #e1e1e1;
+	}
+    .form-control, .btn {        
+        border-radius: 5px;
+    }
+	.signup-form {
+		max-width: 600px;
+    	margin: 0 auto;
+		padding-top: 90px; 
+	}
+
+    .signup-form form {
+		color: #fff;
+		border-radius: 20px;
+      background-image: linear-gradient(-45deg , #01010d ,#242e35);
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+		padding: 30px;
+    }
+	.signup-form h2 {
+		color: #fff;
+		font-weight: bold;
+        margin-top: 0;
+    }
+    .signup-form hr {
+        margin: 0 -30px 20px;
+    }
+	
+  
+    .signup-form .btn{        
+        font-size: 16px;
+        font-weight: bold;
+		background-image: linear-gradient( 45deg , #02f9e5 , #0015e6);
+		border: none;
+		width: 100%;
+    }
+	.signup-form .btn:hover, .signup-form .btn:focus {
+		background-image: linear-gradient( 45deg , #0015e6 , #02f9e5);
+		outline: none;
+	}
+	
+	::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+		color: rgb(75, 141, 172) !important;
+	  }
+	  
+	  ::ng-deep .mat-input-element {
+		caret-color: white !important;
+	  }
+	  
+	  ::ng-deep .mat-form-field-label, .mat-icon {
+		color: white !important;
+	  }
+	  
+	  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+		color: white;
+	  }
+	  
+	  ::ng-deep .mat-form-field .mat-hint,
+	  input,
+	  ::placeholder,
+	  .mat-form-field-label {
+		color: white;
+	  }
+
+	  ::ng-deep .mat-form-field {
+		  width: 100%;
+	  }
+	
+	  
+
+
+
+
+
+	
